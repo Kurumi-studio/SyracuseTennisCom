@@ -14,15 +14,14 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh; /* Each section takes the full viewport height */
-    justify-content: space-between;
+    height: 100vh; /* Each section still takes full viewport height */
+    justify-content: space-around; /* Ensures the image and text are better aligned */
     align-items: center;
     background-color: #fff;
-    margin-bottom: 20px; /* This ensures there's some space between sections */
 }
 
 .photo-section {
-    flex: 0 0 85%;
+    flex: 0 0 75%; /* Adjust image section to 75% of the height */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -31,24 +30,25 @@ body {
 }
 
 .photo-section img {
-    max-width: 100%;
-    max-height: 100%;
+    width: auto; /* Image takes up more vertical space, adjusts height */
+    height: 100%; /* Ensures image fills the section vertically */
     object-fit: cover;
 }
 
 .text-section {
-    flex: 0 0 15%;
-    width: 100%;
-    padding: 20px;
+    flex: 0 0 20%; /* Adjust the text section to 20% */
+    width: 80%; /* Keep the text width smaller than full screen */
+    padding: 10px;
     background-color: #fafafa;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .text-section h1 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
